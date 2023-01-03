@@ -1,0 +1,81 @@
+@import "variables";
+
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  > div {
+    background: $color-bg-variant;
+    border: 1px solid transparent;
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    transition: $transition;
+
+    &:hover {
+      background: transparent;
+      border-color: $color-primary-variant;
+      cursor: default;
+    }
+
+    .experience__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+
+      .experience__details {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin: 0.4rem;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: $color-primary;
+      font-size: 1rem;
+    }
+  }
+}
+
+.experience__content-icon {
+  color: $color-primary;
+}
+
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+    place-items: center;
+    > div {
+      width: 80%;
+      padding: 2rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience__container {
+    width: 100%;
+    padding: 2rem 1rem;
+
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .experience__details {
+    small {
+      font-size: 0.7rem;
+    }
+  }
+
+  .experience__container > div .experience__content {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+}

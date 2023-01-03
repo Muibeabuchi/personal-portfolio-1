@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+.about {
+  padding-top: 7rem;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+.about__me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+  display: grid;
+  place-items: center;
+}
+.about__me .about__me-img {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: all 400ms ease;
+}
+.about__me .about__me-img:hover {
+  transform: rotate(0);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.about__cards .about__card {
+  background-color: #2c2c6c;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 400ms ease;
+}
+.about__cards .about__card h5 {
+  font-size: 0.95rem;
+}
+.about__cards .about__card small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
+}
+.about__cards .about__card:hover {
+  background-color: transparent;
+  border-color: rgba(77, 181, 255, 0.4);
+}
+.about__cards .about__card .about__icon {
+  color: #4db5ff;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about__content p {
+  margin: 2rem 0 2.6rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1024px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about__content p {
+    margin: 1rem 0 1.5rem;
+  }
+  .about__me {
+    width: 50%;
+    margin: 2rem auto 4rem;
+  }
+  .about {
+    padding-top: 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about__me {
+    width: 65%;
+    margin: 0 auto 3rem;
+  }
+  .about__content {
+    text-align: center;
+  }
+  .about__content .about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .about__content p {
+    margin: 1.5rem 0;
+  }
+  .about {
+    margin-top: 3rem;
+  }
+}
+header {
+  height: 100vh;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__container-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.header__container-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+}
+.header__container-left h5:first-child {
+  font-family: "Passions Conflict", cursive;
+  font-size: 4rem;
+}
+
+.scroll {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: -2.5rem;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  gap: 0.8rem;
+  bottom: 3rem;
+  left: 0;
+}
+.header__socials a {
+  border-radius: 0.5rem;
+  width: 1.8rem;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+}
+.header__socials a:hover {
+  background-color: #4db5ff;
+  transform: translateX(-0.5rem);
+}
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: #4db5ff;
+}
+
+.me {
+  background: linear-gradient(#4db5ff, transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__container-right {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header__container {
+    flex-direction: column;
+  }
+  .header__socials {
+    bottom: 7rem;
+  }
+  .scroll {
+    bottom: 10rem;
+    right: -1rem;
+  }
+  .header__container-left {
+    gap: 0;
+  }
+  header {
+    padding-top: 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .me {
+    position: static;
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__container-left > h5:first-child {
+    font-size: 2rem;
+  }
+  .scroll,
+.header__socials {
+    display: none;
+  }
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 11;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+}
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.active {
+  background: #1f1f38;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    bottom: 0.3rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  nav {
+    padding: 0.4rem 1rem;
+  }
+  nav a {
+    padding: 0.5rem;
+  }
+}
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.experience__container > div {
+  background: #2c2c6c;
+  border: 1px solid transparent;
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  transition: all 400ms ease;
+}
+.experience__container > div:hover {
+  background: transparent;
+  border-color: rgba(77, 181, 255, 0.4);
+  cursor: default;
+}
+.experience__container > div .experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+.experience__container > div .experience__content .experience__details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0.4rem;
+}
+.experience__container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4db5ff;
+  font-size: 1rem;
+}
+
+.experience__content-icon {
+  color: #4db5ff;
+}
+
+@media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .experience__container {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .experience__container > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .experience__details small {
+    font-size: 0.7rem;
+  }
+  .experience__container > div .experience__content {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #1f1f38;
+  color: #fff;
+  line-height: 1.7;
+  background-image: url(../assets/bg-texture.png);
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+section > h2,
+section > h5 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+section > h2 {
+  color: #4db5ff;
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+a {
+  color: #4db5ff;
+  transition: all 400ms ease;
+}
+a:hover {
+  color: #fff;
+}
+
+.btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+  color: #4db5ff;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid #4db5ff;
+  transition: all 400ms ease;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #1f1f38;
+  border-color: transparent;
+}
+.btn-primary {
+  background: #4db5ff;
+  color: #1f1f38;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 86%;
+  }
+  section {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */

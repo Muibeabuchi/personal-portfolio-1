@@ -1,0 +1,153 @@
+@import "./variables";
+
+header {
+  height: 100vh;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__container-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.header__container-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+
+  h5:first-child {
+    font-family: "Passions Conflict", cursive;
+    font-size: 4rem;
+  }
+}
+
+.scroll {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: -2.5rem;
+}
+
+// ---------------CTA--------------------//
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+// -------------------SOCIALS----------------//
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  gap: 0.8rem;
+  bottom: 3rem;
+  left: 0;
+
+  a {
+    border-radius: 0.5rem;
+    width: 1.8rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+  }
+
+  a:hover {
+    background-color: $color-primary;
+    transform: translateX(-0.5rem);
+  }
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: $color-primary;
+  }
+}
+
+//------------- IMAGES--------------------//
+
+.me {
+  background: linear-gradient($color-primary, transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+// MEDIA QUERIES-------------(MEDIUM DEVICES)
+
+@media screen and (max-width: 1024px) {
+  .header__container-right {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header__container {
+    flex-direction: column;
+  }
+
+  .header__socials {
+    bottom: 7rem;
+  }
+
+  .scroll {
+    bottom: 10rem;
+    right: -1rem;
+  }
+
+  .header__container-left {
+    gap: 0;
+  }
+
+  header {
+    padding-top: 1rem;
+    height: fit-content;
+  }
+
+  .me {
+    position: static;
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+  }
+
+  .header__container-left {
+    > h5:first-child {
+      font-size: 2rem;
+    }
+  }
+
+  .scroll,
+  .header__socials {
+    display: none;
+  }
+}

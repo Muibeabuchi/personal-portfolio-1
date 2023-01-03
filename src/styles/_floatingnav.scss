@@ -1,0 +1,51 @@
+@import "variables";
+
+nav {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 11;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  backdrop-filter: blur(15px);
+
+  a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: $color-light;
+    font-size: 1.1rem;
+  }
+
+  a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.active {
+  background: $color-bg;
+  color: $color-white;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    bottom: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav {
+    padding: 0.4rem 1rem;
+
+    a {
+      padding: 0.5rem;
+    }
+  }
+}
