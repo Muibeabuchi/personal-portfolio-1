@@ -228,6 +228,65 @@ header {
     display: none;
   }
 }
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+}
+
+.service {
+  background: #2c2c6c;
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid #4db5ff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 400ms ease;
+}
+.service:hover {
+  background-color: transparent;
+  border-color: rgba(77, 181, 255, 0.4);
+  cursor: default;
+}
+.service .service__head {
+  background-color: #4db5ff;
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.service .service__head h3 {
+  color: #1f1f38;
+  font-size: 1rem;
+}
+.service .service__list {
+  padding: 2rem;
+}
+.service .service__list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.service .service__list li .service__list-icon {
+  color: #4db5ff;
+  margin-top: 2px;
+}
+.service .service__list li p {
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 nav {
   background-color: rgba(0, 0, 0, 0.3);
   width: -webkit-max-content;
@@ -342,6 +401,65 @@ nav a:hover {
   .experience__container > div .experience__content {
     grid-template-columns: 1fr;
     row-gap: 1rem;
+  }
+}
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+}
+
+.service {
+  background: #2c2c6c;
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid #4db5ff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 400ms ease;
+}
+.service:hover {
+  background-color: transparent;
+  border-color: rgba(77, 181, 255, 0.4);
+  cursor: default;
+}
+.service .service__head {
+  background-color: #4db5ff;
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.service .service__head h3 {
+  color: #1f1f38;
+  font-size: 1rem;
+}
+.service .service__list {
+  padding: 2rem;
+}
+.service .service__list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.service .service__list li .service__list-icon {
+  color: #4db5ff;
+  margin-top: 2px;
+}
+.service .service__list li p {
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 * {
