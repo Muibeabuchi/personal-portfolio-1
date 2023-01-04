@@ -1,0 +1,58 @@
+@import "variables";
+
+#testimonials {
+  .container {
+    width: 40%;
+    padding-bottom: 3rem;
+
+    .testimonial {
+      text-align: center;
+      background: $color-bg-variant;
+      padding: 2rem;
+      border-radius: 2rem;
+      user-select: none;
+
+      .client__avatar {
+        width: 4rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        border: 0.4rem solid $color-primary-variant;
+      }
+
+      small {
+        font-weight: 300;
+        color: $color-light;
+        display: block;
+        width: 80%;
+        margin: 0.8rem auto 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #testimonials {
+    .container {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #testimonials {
+    .container {
+      width: $container-width-sm;
+    }
+
+    .client__review {
+      width: $container-width-sm;
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: $color-primary;
+}
