@@ -1,5 +1,5 @@
 import CTA from "../components/CTA";
-import profilePicture from "../assets/me.png";
+import profilePicture from "../assets/pic2.jpg";
 import HeaderSocials from "../components/HeaderSocials";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { useState } from "react";

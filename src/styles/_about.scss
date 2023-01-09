@@ -24,6 +24,8 @@
     overflow: hidden;
     transform: rotate(10deg);
     transition: $transition;
+    width: 100%;
+    aspect-ratio: 1/1;
 
     &:hover {
       transform: rotate(0);
@@ -109,6 +111,7 @@
     .about__cards {
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
+      // margin-top: 2rem;
     }
 
     p {
@@ -118,5 +121,7 @@
 
   .about {
     margin-top: 3rem;
+
   }
+
 }

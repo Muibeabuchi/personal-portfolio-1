@@ -88,10 +88,11 @@ header {
 //------------- IMAGES--------------------//
 
 .me {
-  background: linear-gradient($color-primary, transparent);
+  // background: linear-gradient($color-primary, transparent);
   width: 22rem;
   height: 30rem;
   position: absolute;
+  overflow: hidden;
 
   margin-top: 4rem;
   border-radius: 12rem 12rem 0 0;

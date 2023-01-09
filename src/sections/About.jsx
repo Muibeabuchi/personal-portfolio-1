@@ -1,9 +1,9 @@
-import aboutMe from "../assets/me-about.jpg";
+import aboutMe from "../assets/pic1.jpg";
 import AboutCard from "../components/AboutCard";
 import aboutCardData from "../data/aboutCardData";
 
 const About = () => {
-  console.log(aboutCardData);
+  // console.log(aboutCardData);
   return (
     <section id="about" className="about">
       <h5>Get To Know</h5>
@@ -18,7 +18,7 @@ const About = () => {
         <div className="about__content">
           <div className="about__cards">
             {aboutCardData.map((data) => {
-              console.log(data);
+              // console.log(data);
               return <AboutCard key={data.id} data={data} />;
             })}
           </div>
